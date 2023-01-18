@@ -4,8 +4,8 @@ import json
 import mmh3
 import os
 import random
+import time
 import requests
-from bs4 import BeautifulSoup
 from pprint import pprint
 from config import headers
 
@@ -48,8 +48,13 @@ class FavFound:
             'query': 'ip : {}'.format(args.ip),
             'offset': 0,
         }
-        res = requests.get(url=self.url, params=params, headers=self.headers)
-        res = res.json()
+
+        try:
+            print("It takes around more 30 seconds")
+            res = requests.get(url=self.url, params=params, headers=self.headers)
+            res = res.json()
+        except Exception as e:
+            exit("Try favicon search again with the same IP after 5 minute. CriminalIP checks every port connected on {}".format(args.ip))
 
         favicon_list = set()
         if res['status'] == 200 and res['data']['count'] > 0:
