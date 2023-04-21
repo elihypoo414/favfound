@@ -1,8 +1,8 @@
 
 # favfound (criminalip api)
-This code was made to extract the fabicon hash from your desired IP address or URL. You can also see all the IP addresses that are associated with the fabicon hash value. I used an OSINT search engine similar to Shodan and Censys called [CriminalIP]([https://www.criminalip.io](https://www.criminalip.io/)) and the API from their free beta services.
+This code was made to extract the fabicon hash from your desired IP address or URL. You can also see all the IP addresses that are associated with the fabicon hash value. I used an OSINT search engine similar to Shodan and Censys called CriminalIP and the API from their free service.
 
-- In order to receive your `criminal-api-key`, you have to make a beta account. (All API are currently provided for free)
+- In order to receive your criminal-api-key, you have to make an account. (They've recently launched paid plans, but you can also create a free account and access an API key)
 - Because of a problem with Python's argparse module, searching for favicons starting with `'-'` (e.g '-82abc4a') is currently unavailable. Please notify me through 'issues' or 'pull request' if a problem occurs
 
 
